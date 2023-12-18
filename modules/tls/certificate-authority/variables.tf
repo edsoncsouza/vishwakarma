@@ -40,3 +40,12 @@ If set to false, only the passed CA and client certs are being used.
 EOF
   type        = bool
 }
+
+variable "ca_config" {
+  description = "Certificate Authority configuration"
+  type        = map(string)
+  default = {
+    key_pem  = ""
+    cert_pem = ""
+  }
+}
